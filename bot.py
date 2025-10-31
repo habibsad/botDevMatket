@@ -27,8 +27,10 @@ async def on_member_join(member):
             ),
             color=0x3498db  # لون المستطيل (أزرق)
         )
+        # Thumbnail للأعضاء
         embed.set_thumbnail(url=member.avatar.url if member.avatar else member.default_avatar.url)
-        embed.set_image(url="https://cdn.discordapp.com/attachments/1433513634675560498/1433735631024033823/openart-8e45abdd-37b2-43fd-b923-94ffd8601dae.png")
+        # صورة الترحيب
+        embed.set_image(url="https://media.discordapp.net/attachments/1433513634675560498/1433735631024033823/openart-8e45abdd-37b2-43fd-b923-94ffd8601dae.png?ex=6905c5db&is=6904745b&hm=d9adb213abcdd7b0fc720fef8582b3e4491f0b859fd8c6a86cc24bab57e6f4b7&=&format=webp&quality=lossless")
         embed.set_footer(text="DevMarket Community | We’re glad to have you 💙")
 
         await channel.send(embed=embed)
