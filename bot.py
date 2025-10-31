@@ -37,3 +37,14 @@ async def on_member_join(member):
 
 # ⚡ تشغيل البوت مع توكن مخفي في Environment Variable
 bot.run(os.getenv("TOKEN"))
+import json
+
+data = {}
+
+# حفظ البيانات
+with open("data.json", "w") as f:
+    json.dump(data, f)
+
+# قراءة البيانات عند تشغيل البوت
+with open("data.json", "r") as f:
+    data = json.load(f)
